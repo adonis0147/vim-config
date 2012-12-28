@@ -60,7 +60,7 @@ set undolevels=700
 "set lazyredraw
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"					   User Interface                      "
+"                      User Interface                      "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Only toggle a menu when using complete
@@ -96,7 +96,7 @@ endtry
 highlight MatchParen ctermbg=None ctermfg=Red cterm=bold
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"				Text, Tab, Indent, Backspace               "
+"               Text, Tab, Indent, Backspace               "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Text width
