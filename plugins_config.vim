@@ -28,7 +28,6 @@ nnoremap <F4> :TagbarToggle<cr>
 
 
 " Auto-Pairs settings
-let g:AutoPairsFlyMode = 1
 autocmd FileType html,xml,php let g:AutoPairs = {'(':')', '[':']', '{':'}', "'":"'", '"':'"', '`':'`', '<':'>'}
 
 
