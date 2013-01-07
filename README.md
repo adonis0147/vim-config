@@ -48,6 +48,7 @@ sh install.sh
 
   - `,e`  ==> quit
   - `,E`  ==> quit all without saving
+  - `,<enter>`  ==> don't highlight the search results
   - Easier moving between windows:
     + `ctrl-j`  ==> down
     + `ctrl-k`  ==> up
