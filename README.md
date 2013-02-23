@@ -30,19 +30,20 @@ sh install.sh
   2. [Molokai](https://github.com/tomasr/molokai) -Molokai color scheme for Vim
   3. [Vim-powerline](https://github.com/Lokaltog/vim-powerline) -The ultimate vim statusline utility
   4. [Golden-ratio](https://github.com/roman/golden-ratio) -Automatic resizing of Vim windows to the golden ratio 
-  5. [Ctrlp.vim](https://github.com/kien/ctrlp.vim) -Fuzzy file, buffer, mru, tag, etc finder.
-  6. [Ack.vim](https://github.com/mileszs/ack.vim) -Vim plugin for the Perl module / CLI script 'ack'
-  7. [Vim-easymotion](https://github.com/Lokaltog/vim-easymotion) -Vim motions on speed!
-  8. [Nerdtree](https://github.com/scrooloose/nerdtree) -A tree explorer plugin for vim
-  9. [Tagbar](https://github.com/majutsushi/tagbar) -Vim plugin that displays tags in a window, ordered by class etc
-  10. [Syntastic](https://github.com/scrooloose/syntastic) -Syntax checking hacks for vim
-  11. [Nerdcommenter](https://github.com/scrooloose/nerdcommenter) -Vim plugin for intensely orgasmic commenting
-  12. [Auto-pairs](https://github.com/jiangmiao/auto-pairs) -Vim plugin, insert or delete brackets, parens, quotes in pair
-  13. [Vim-surround](https://github.com/tpope/vim-surround) -Quoting/parenthesizing made simple
-  14. [Neocomplcache](https://github.com/Shougo/neocomplcache) -Ultimate auto-completion system for Vim
-  15. [Zencoding-vim](https://github.com/mattn/zencoding-vim) -Zen-coding for vim: http://code.google.com/p/zen-coding/
-  16. [sudo.vim](https://github.com/vim-scripts/sudo.vim) -Allows one to edit a file with prevledges from an unprivledged session
-  17. [a.vim](https://github.com/vim-scripts/a.vim) -Alternate Files quickly (.c --> .h etc)
+  5. [IndentLine](https://github.com/Yggdroot/indentLine) -A vim plugin to display the indent line
+  6. [Ctrlp.vim](https://github.com/kien/ctrlp.vim) -Fuzzy file, buffer, mru, tag, etc finder.
+  7. [Ack.vim](https://github.com/mileszs/ack.vim) -Vim plugin for the Perl module / CLI script 'ack'
+  8. [Vim-easymotion](https://github.com/Lokaltog/vim-easymotion) -Vim motions on speed!
+  9. [Nerdtree](https://github.com/scrooloose/nerdtree) -A tree explorer plugin for vim
+  10. [Tagbar](https://github.com/majutsushi/tagbar) -Vim plugin that displays tags in a window, ordered by class etc
+  11. [Syntastic](https://github.com/scrooloose/syntastic) -Syntax checking hacks for vim
+  12. [Nerdcommenter](https://github.com/scrooloose/nerdcommenter) -Vim plugin for intensely orgasmic commenting
+  13. [Auto-pairs](https://github.com/jiangmiao/auto-pairs) -Vim plugin, insert or delete brackets, parens, quotes in pair
+  14. [Vim-surround](https://github.com/tpope/vim-surround) -Quoting/parenthesizing made simple
+  15. [Neocomplcache](https://github.com/Shougo/neocomplcache) -Ultimate auto-completion system for Vim
+  16. [Zencoding-vim](https://github.com/mattn/zencoding-vim) -Zen-coding for vim: http://code.google.com/p/zen-coding/
+  17. [sudo.vim](https://github.com/vim-scripts/sudo.vim) -Allows one to edit a file with prevledges from an unprivledged session
+  18. [a.vim](https://github.com/vim-scripts/a.vim) -Alternate Files quickly (.c --> .h etc)
   
 ## Shortcuts
 
@@ -64,13 +65,13 @@ sh install.sh
   - `<F3>`  ==> toggle nerdtree
   - `<F4>`  ==> toggle tagbar
   - `<F5>`  ==> build a project
-  - `<F9>`  ==> build and run(just available for a single source code)
+  - `<F9>`  ==> build and run(only available for a single source code file)
   - ack a word which is under the cursor
     1. `,a` ==> toggle ack command
     2. Edit the command
     3. Press `enter`
     
-## Plugin Manager
+## Plugins Management
 
 ### Install
 
