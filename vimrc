@@ -94,6 +94,7 @@ catch
 	colorscheme desert
 endtry
 highlight MatchParen ctermbg=None ctermfg=Red cterm=bold
+highlight Conceal ctermbg=None
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "               Text, Tab, Indent, Backspace               "
