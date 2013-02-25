@@ -42,8 +42,9 @@ sh install.sh
   14. [Vim-surround](https://github.com/tpope/vim-surround) -Quoting/parenthesizing made simple
   15. [Neocomplcache](https://github.com/Shougo/neocomplcache) -Ultimate auto-completion system for Vim
   16. [Zencoding-vim](https://github.com/mattn/zencoding-vim) -Zen-coding for vim: http://code.google.com/p/zen-coding/
-  17. [sudo.vim](https://github.com/vim-scripts/sudo.vim) -Allows one to edit a file with prevledges from an unprivledged session
-  18. [a.vim](https://github.com/vim-scripts/a.vim) -Alternate Files quickly (.c --> .h etc)
+  17. [Ultisnips](https://github.com/SirVer/ultisnips) -This is an implementation of TextMates Snippets for the Vim Text Editor.
+  18. [sudo.vim](https://github.com/vim-scripts/sudo.vim) -Allows one to edit a file with prevledges from an unprivledged session
+  19. [a.vim](https://github.com/vim-scripts/a.vim) -Alternate Files quickly (.c --> .h etc)
   
 ## Shortcuts
 
@@ -70,6 +71,7 @@ sh install.sh
     1. `,a` ==> toggle ack command
     2. Edit the command
     3. Press `enter`
+  - `ctrl-t`  ==> UltiSnipsExpandTrigger
     
 ## Plugins Management
 

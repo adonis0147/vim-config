@@ -22,6 +22,7 @@ Bundle 'jiangmiao/auto-pairs'
 Bundle 'tpope/vim-surround'
 Bundle 'Shougo/neocomplcache'
 Bundle 'mattn/zencoding-vim'
+Bundle 'SirVer/ultisnips'
 Bundle 'sudo.vim'
 Bundle 'a.vim'
 

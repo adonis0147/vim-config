@@ -31,6 +31,11 @@ nnoremap <F4> :TagbarToggle<cr>
 autocmd FileType html,xml,php let g:AutoPairs = {'(':')', '[':']', '{':'}', "'":"'", '"':'"', '`':'`', '<':'>'}
 
 
+" UltiSnips settings
+let g:UltiSnipsExpandTrigger = '<c-t>'
+let g:UltiSnipsSnippetsDir = '~/.vim/bundle/ultisnips/UltiSnips'
+
+
 " NeoComplCacheEnable settings
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
