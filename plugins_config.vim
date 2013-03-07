@@ -36,6 +36,10 @@ let g:UltiSnipsExpandTrigger = '<c-t>'
 let g:UltiSnipsSnippetsDir = '~/.vim/bundle/ultisnips/UltiSnips'
 
 
+" IndentLine settings
+let g:indentLine_fileTypeExclude = ['']
+
+
 " NeoComplCacheEnable settings
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
