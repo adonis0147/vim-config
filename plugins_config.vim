@@ -27,6 +27,10 @@ let NERDTreeIgnore=['.o$[[file]]', '.class$[[file]]', '.git$[[dir]]']
 nnoremap <F4> :TagbarToggle<cr>
 
 
+" Syntastic settings
+let g:syntastic_auto_loc_list = 1
+
+
 " Auto-Pairs settings
 autocmd FileType html,xml,php let g:AutoPairs = {'(':')', '[':']', '{':'}', "'":"'", '"':'"', '`':'`', '<':'>'}
 
