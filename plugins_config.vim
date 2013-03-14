@@ -41,7 +41,7 @@ let g:UltiSnipsSnippetsDir = '~/.vim/bundle/ultisnips/UltiSnips'
 
 
 " IndentLine settings
-let g:indentLine_fileTypeExclude = ['']
+let g:indentLine_fileTypeExclude = ['', 'text', 'markdown', 'plaintex']
 
 
 " NeoComplCacheEnable settings
