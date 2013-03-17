@@ -48,7 +48,7 @@ set hidden
 set pastetoggle=<F2>
 
 " Set the clipboard
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 " History
 set history=700
@@ -187,7 +187,7 @@ vnoremap < <gv
 vnoremap > >gv
 
 " Copy content to clipboard('+clipboard' needed)
-vnoremap <c-c> "+y
+vnoremap <c-c> :y+<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                 Autocmd, Helper Functions                "
