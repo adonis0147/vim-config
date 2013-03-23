@@ -187,7 +187,7 @@ vnoremap < <gv
 vnoremap > >gv
 
 " Copy content to clipboard('+clipboard' needed)
-vnoremap <c-c> :y+<cr>
+vnoremap <c-c> "+y
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                 Autocmd, Helper Functions                "

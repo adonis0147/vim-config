@@ -36,7 +36,7 @@ autocmd FileType html,xml,php let g:AutoPairs = {'(':')', '[':']', '{':'}', "'":
 
 
 " UltiSnips settings
-let g:UltiSnipsExpandTrigger = '<c-t>'
+let g:UltiSnipsExpandTrigger = '<c-j>'
 let g:UltiSnipsSnippetsDir = '~/.vim/bundle/ultisnips/UltiSnips'
 
 

@@ -72,7 +72,7 @@ sh install.sh
     1. `,a` ==> toggle ack command
     2. Edit the command
     3. Press `enter`
-  - `ctrl-t`  ==> UltiSnipsExpandTrigger
+  - `ctrl-j`  ==> UltiSnipsExpandTrigger
     
 ## Plugins Management
 
