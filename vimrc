@@ -186,8 +186,8 @@ nnoremap <leader>m <esc>:tabnext<cr>
 vnoremap < <gv
 vnoremap > >gv
 
-" Copy content to clipboard('+clipboard' needed)
-vnoremap <c-c> "+y
+" Copy content to clipboard
+vnoremap <c-c> y:call CopyToClipboard()<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                 Autocmd, Helper Functions                "
@@ -236,3 +236,20 @@ function! CreateTags()
     exec "redraw!" 
 endfunction
 autocmd! bufwritepost *.h,*.c,*.cpp call CreateTags()
+
+function! CopyToClipboard()
+python << EOF
+import vim
+from subprocess import Popen, PIPE
+
+try:
+    p = Popen(['xsel', '-bi'], stdin=PIPE)
+    p.communicate(input=vim.eval('@0'))
+    print('yanked')
+except:
+    vim.command('echohl Error')
+    error = "The content isn't yanked, please install xsel to your system."    
+    vim.command('echoerr "%s"' % error)
+    vim.command('echohl None')
+EOF
+endfunction
