@@ -237,6 +237,7 @@ function! CreateTags()
 endfunction
 autocmd! bufwritepost *.h,*.c,*.cpp call CreateTags()
 
+" Copy content to clipboard
 function! CopyToClipboard()
 python << EOF
 import vim

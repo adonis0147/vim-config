@@ -4,13 +4,13 @@
 
 ## Dependencies
 
-  1. vim-gtk / vim-gnome
+  1. [xsel](http://www.kfish.org/software/xsel/)
   2. [exuberant-ctags](http://ctags.sourceforge.net/)
   3. [ack-grep](http://betterthangrep.com/)
 
 ``` bash
 # For Debian/Ubuntu
-sudo apt-get install vim-gtk exuberant-ctags ack-grep
+sudo apt-get install xsel exuberant-ctags ack-grep
 ```
 
 ## Installation
@@ -20,7 +20,7 @@ sudo apt-get install vim-gtk exuberant-ctags ack-grep
   
 ``` bash
 # For Debian/Ubuntu
-sudo apt-get install vim-gtk exuberant-ctags ack-grep
+sudo apt-get install xsel exuberant-ctags ack-grep
 sh install.sh
 ```
 
