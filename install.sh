@@ -17,3 +17,6 @@ vim -c ":BundleInstall" -c "qa"
 cd ~/.vim/bundle/a.vim/plugin
 mv a.vim a.vim.bak
 sed '/imap/, +d' a.vim.bak > a.vim
+
+cd ~/.vim/bundle/ultisnips/plugin/
+sed -i '/" vim/i autocmd BufEnter * redraw!' UltiSnips.vim
