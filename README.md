@@ -29,7 +29,7 @@ sh install.sh
   1. [Vundle](https://github.com/gmarik/vundle) -The plug-in manager for Vim
   2. [Molokai](https://github.com/tomasr/molokai) -Molokai color scheme for Vim
   3. [Vim-powerline](https://github.com/Lokaltog/vim-powerline) -The ultimate vim statusline utility
-  4. [Golden-ratio](https://github.com/roman/golden-ratio) -Automatic resizing of Vim windows to the golden ratio 
+  4. [GoldenView.Vim](https://github.com/zhaocai/GoldenView.Vim) -Always have a nice view for vim split windows!
   5. [PrettyGuides](https://github.com/adonis0147/prettyGuides) -Indent guides - displaying indent levels by vertical lines for Vim editor
   6. [Ctrlp.vim](https://github.com/kien/ctrlp.vim) -Fuzzy file, buffer, mru, tag, etc finder.
   7. [Ack.vim](https://github.com/mileszs/ack.vim) -Vim plugin for the Perl module / CLI script 'ack'
@@ -73,6 +73,8 @@ sh install.sh
     2. Edit the command
     3. Press `enter`
   - `ctrl-j`  ==> UltiSnipsExpandTrigger
+  - `,s`    ==> GoldenViewSwitchMain
+  - `,S`    ==> GoldenViewSwitchToggle
     
 ## Plugins Management
 

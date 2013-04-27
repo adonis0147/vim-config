@@ -18,6 +18,12 @@ set wildignore+=*.class
 nnoremap <leader>a :Ack -i <C-R><C-W>
 
 
+" GoldenView.Vim settings
+let g:goldenview__enable_default_mapping = 0
+nmap <silent> <leader>s <Plug>GoldenViewSwitchMain
+nmap <silent> <leader>S <Plug>GoldenViewSwitchToggle
+
+
 " NERDTree settings
 nnoremap <F3> :NERDTreeToggle<cr>
 let NERDTreeIgnore=['.o$[[file]]', '.class$[[file]]', '.git$[[dir]]']

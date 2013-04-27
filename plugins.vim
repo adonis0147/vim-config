@@ -9,7 +9,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'tomasr/molokai'
 Bundle 'Lokaltog/vim-powerline'
-Bundle 'roman/golden-ratio'
+Bundle 'zhaocai/GoldenView.Vim'
 Bundle 'adonis0147/prettyGuides'
 Bundle 'kien/ctrlp.vim'
 Bundle 'mileszs/ack.vim'
