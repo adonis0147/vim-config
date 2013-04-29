@@ -3,6 +3,12 @@ autocmd! bufwritepost plugins_config.vim source %
 
 let mapleader=","
 
+
+" Powerline settings
+set noshowmode
+let g:Powerline_cache_enabled = 0
+
+
 " CtrlP settings
 let g:ctrlp_map = '<leader>f'
 let g:ctrlp_match_window_reversed = 0
