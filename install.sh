@@ -18,5 +18,5 @@ cd ~/.vim/bundle/a.vim/plugin
 mv a.vim a.vim.bak
 sed '/imap/, +d' a.vim.bak > a.vim
 
-cd ~/.vim/bundle/ultisnips/plugin/
-sed -i '/" vim/i autocmd BufEnter * redraw!' UltiSnips.vim
+cd ~/.vim/bundle/ultisnips/ftdetect
+sed -i '3,5s/^/"/' UltiSnips.vim
