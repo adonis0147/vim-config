@@ -101,10 +101,10 @@ highlight Conceal ctermbg=None
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Text width
-set textwidth=79
+set textwidth=80
 
-" Color the column 79
-set colorcolumn=79
+" Color the column 80
+set colorcolumn=80
 highlight ColorColumn ctermbg=235
 highlight link OverLength ColorColumn
 exec 'match OverLength /\%'.&cc.'v.\+/'
@@ -202,7 +202,8 @@ autocmd FileType php setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
 " Colorcolumn
-autocmd FileType php setlocal textwidth=119 colorcolumn=119
+autocmd FileType php setlocal textwidth=120 colorcolumn=120
+autocmd FileType php exec 'match OverLength /\%'.&cc.'v.\+/'
 autocmd FileType markdown highlight clear ColorColumn
 
 " Build and run(just available for a single source code)
@@ -222,11 +223,14 @@ autocmd FileType c,cpp imap <F5> <esc>:w<cr>:copen<cr>:make<cr>
 autocmd FileType c,cpp nmap <F5> :w<cr>:copen<cr>:make<cr>
 "autocmd QuickFixCmdPost * :copen
 
+" filetype settings
+let g:tex_flavor = 'latex'
+
 " Delete trailing white space on save, useful for Python
 function! DeleteTrailingWS()
-  exe "normal mz"
-  %s/\s\+$//ge
-  exe "normal `z"
+    exe "normal mz"
+    %s/\s\+$//ge
+    exe "normal `z"
 endfunction
 autocmd! bufwritepost *.py :call DeleteTrailingWS()
 
