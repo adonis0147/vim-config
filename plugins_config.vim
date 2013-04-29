@@ -35,10 +35,12 @@ nnoremap <F4> :TagbarToggle<cr>
 
 " Syntastic settings
 let g:syntastic_auto_loc_list = 1
+autocmd FileType tex let g:syntastic_quiet_warnings=1
 
 
 " Auto-Pairs settings
 autocmd FileType html,xml,php let g:AutoPairs = {'(':')', '[':']', '{':'}', "'":"'", '"':'"', '`':'`', '<':'>'}
+autocmd FileType tex let g:AutoPairs = {'(':')', '[':']', '{':'}', "`":"'"}
 
 
 " UltiSnips settings
