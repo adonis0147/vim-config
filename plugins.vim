@@ -8,7 +8,7 @@ call vundle#rc()
 " Add plugins here.
 Bundle 'gmarik/vundle'
 Bundle 'tomasr/molokai'
-Bundle 'Lokaltog/vim-powerline'
+Bundle 'Lokaltog/powerline'
 Bundle 'zhaocai/GoldenView.Vim'
 Bundle 'adonis0147/prettyGuides'
 Bundle 'kien/ctrlp.vim'
