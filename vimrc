@@ -48,7 +48,7 @@ set hidden
 set pastetoggle=<F2>
 
 " Set the clipboard
-set clipboard=unnamedplus
+"set clipboard=unnamedplus
 
 " History
 set history=700

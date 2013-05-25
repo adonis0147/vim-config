@@ -4,6 +4,10 @@ autocmd! bufwritepost plugins_config.vim source %
 let mapleader=","
 
 
+" Vim-powerline settings
+let g:Powerline_cache_enabled = 0
+
+
 " CtrlP settings
 let g:ctrlp_map = '<leader>f'
 let g:ctrlp_match_window_reversed = 0
@@ -138,3 +142,18 @@ let g:neocomplcache_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
 " For perlomni.vim setting.
 " https://github.com/c9s/perlomni.vim
 let g:neocomplcache_omni_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
+
+if !exists('g:neocomplcache_force_omni_patterns')
+    let g:neocomplcache_force_omni_patterns = {}
+endif
+let g:neocomplcache_force_overwrite_completefunc = 1
+let g:neocomplcache_force_omni_patterns.c =
+        \ '[^.[:digit:] *\t]\%(\.\|->\)'
+let g:neocomplcache_force_omni_patterns.cpp =
+        \ '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::\|>::'
+let g:neocomplcache_force_omni_patterns.objc =
+        \ '[^.[:digit:] *\t]\%(\.\|->\)'
+let g:neocomplcache_force_omni_patterns.objcpp =
+        \ '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::\|>::'
+let g:clang_complete_auto = 0
+let g:clang_auto_select = 0

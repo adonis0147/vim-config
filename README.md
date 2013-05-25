@@ -10,7 +10,7 @@
 
 ``` bash
 # For Debian/Ubuntu
-sudo apt-get install xsel exuberant-ctags ack-grep
+sudo apt-get install xsel exuberant-ctags ack-grep libclang-dev
 ```
 
 ## Installation
@@ -20,7 +20,7 @@ sudo apt-get install xsel exuberant-ctags ack-grep
 
 ``` bash
 # For Debian/Ubuntu
-sudo apt-get install xsel exuberant-ctags ack-grep
+sudo apt-get install xsel exuberant-ctags ack-grep libclang-dev
 sh install.sh
 ```
 
@@ -28,7 +28,7 @@ sh install.sh
 
   1. [Vundle](https://github.com/gmarik/vundle) -The plug-in manager for Vim
   2. [Molokai](https://github.com/tomasr/molokai) -Molokai color scheme for Vim
-  3. [Powerline](https://github.com/Lokaltog/powerline) -The ultimate statusline/prompt utility.
+  3. [Vim-powerline](https://github.com/Lokaltog/vim-powerline) -The ultimate statusline/prompt utility.
   4. [GoldenView.Vim](https://github.com/zhaocai/GoldenView.Vim) -Always have a nice view for vim split windows!
   5. [PrettyGuides](https://github.com/adonis0147/prettyGuides) -Indent guides - displaying indent levels by vertical lines for Vim editor
   6. [Ctrlp.vim](https://github.com/kien/ctrlp.vim) -Fuzzy file, buffer, mru, tag, etc finder.
@@ -42,10 +42,11 @@ sh install.sh
   14. [Auto-pairs](https://github.com/jiangmiao/auto-pairs) -Vim plugin, insert or delete brackets, parens, quotes in pair
   15. [Vim-surround](https://github.com/tpope/vim-surround) -Quoting/parenthesizing made simple
   16. [Neocomplcache](https://github.com/Shougo/neocomplcache) -Ultimate auto-completion system for Vim
-  17. [Zencoding-vim](https://github.com/mattn/zencoding-vim) -Zen-coding for vim: http://code.google.com/p/zen-coding/
-  18. [Ultisnips](https://github.com/SirVer/ultisnips) -This is an implementation of TextMates Snippets for the Vim Text Editor.
-  19. [sudo.vim](https://github.com/vim-scripts/sudo.vim) -Allows one to edit a file with prevledges from an unprivledged session
-  20. [a.vim](https://github.com/vim-scripts/a.vim) -Alternate Files quickly (.c --> .h etc)
+  17. [Clang_complete](https://github.com/Rip-Rip/clang_complete) -Vim plugin that use clang for completing C/C++ code.
+  18. [Zencoding-vim](https://github.com/mattn/zencoding-vim) -Zen-coding for vim: http://code.google.com/p/zen-coding/
+  19. [Ultisnips](https://github.com/SirVer/ultisnips) -This is an implementation of TextMates Snippets for the Vim Text Editor.
+  20. [sudo.vim](https://github.com/vim-scripts/sudo.vim) -Allows one to edit a file with prevledges from an unprivledged session
+  21. [a.vim](https://github.com/vim-scripts/a.vim) -Alternate Files quickly (.c --> .h etc)
 
 ## Shortcuts
 
