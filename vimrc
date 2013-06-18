@@ -225,21 +225,24 @@ autocmd FileType c,cpp nmap <F5> :w<cr>:copen<cr>:make<cr>
 
 " filetype settings
 let g:tex_flavor = 'latex'
+autocmd bufread,bufnewfile *.md :set filetype=markdown
 
 " Delete trailing white space on save, useful for Python
 function! DeleteTrailingWS()
-    exe "normal mz"
-    %s/\s\+$//ge
-    exe "normal `z"
+    if index(['markdown'], &ft) == -1
+        exe "normal mz"
+        %s/\s\+$//ge
+        exe "normal `z"
+    end
 endfunction
-autocmd! bufwritepost *.py :call DeleteTrailingWS()
+autocmd! bufwritepre * :call DeleteTrailingWS()
 
 " Auto generate tags
 function! CreateTags()
     :silent !ctags -R
-    exec "redraw!" 
+    exec "redraw!"
 endfunction
-autocmd! bufwritepost *.h,*.c,*.cpp call CreateTags()
+"autocmd! bufwritepost *.h,*.c,*.cpp call CreateTags()
 
 " Copy content to clipboard
 function! CopyToClipboard()
@@ -253,7 +256,7 @@ try:
     print('yanked')
 except:
     vim.command('echohl Error')
-    error = "The content isn't yanked, please install xsel to your system."    
+    error = "The content isn't yanked, please install xsel to your system."
     vim.command('echoerr "%s"' % error)
     vim.command('echohl None')
 EOF
