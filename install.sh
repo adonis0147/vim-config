@@ -11,6 +11,7 @@ git clone http://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 cp vimrc ~/.vimrc
 cp plugins.vim ~/.vim/
 cp plugins_config.vim ~/.vim
+cp -rf indent ~/.vim
 
 vim -c ":BundleInstall" -c "qa"
 
