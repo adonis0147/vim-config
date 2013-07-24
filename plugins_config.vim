@@ -125,7 +125,7 @@ inoremap <expr><Down>  neocomplcache#close_popup() . "\<Down>"
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType python setlocal omnifunc=jedi#complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " Enable heavy omni completion.
@@ -156,3 +156,6 @@ let g:neocomplcache_force_omni_patterns.objcpp =
         \ '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::\|>::'
 let g:clang_complete_auto = 0
 let g:clang_auto_select = 0
+
+let g:jedi#auto_vim_configuration = 0
+let g:neocomplete#force_omni_input_patterns.python = '[^. \t]\.\w*'

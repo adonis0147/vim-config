@@ -43,10 +43,11 @@ sh install.sh
   15. [Vim-surround](https://github.com/tpope/vim-surround) -Quoting/parenthesizing made simple
   16. [Neocomplcache](https://github.com/Shougo/neocomplcache) -Ultimate auto-completion system for Vim
   17. [Clang_complete](https://github.com/Rip-Rip/clang_complete) -Vim plugin that use clang for completing C/C++ code.
-  18. [Zencoding-vim](https://github.com/mattn/zencoding-vim) -Zen-coding for vim: http://code.google.com/p/zen-coding/
-  19. [Ultisnips](https://github.com/SirVer/ultisnips) -This is an implementation of TextMates Snippets for the Vim Text Editor.
-  20. [sudo.vim](https://github.com/vim-scripts/sudo.vim) -Allows one to edit a file with prevledges from an unprivledged session
-  21. [a.vim](https://github.com/vim-scripts/a.vim) -Alternate Files quickly (.c --> .h etc)
+  18. [Jedi-vim](https://github.com/davidhalter/jedi-vim) -Using the jedi autocompletion library for VIM.
+  19. [Zencoding-vim](https://github.com/mattn/zencoding-vim) -Zen-coding for vim: http://code.google.com/p/zen-coding/
+  20. [Ultisnips](https://github.com/SirVer/ultisnips) -This is an implementation of TextMates Snippets for the Vim Text Editor.
+  21. [sudo.vim](https://github.com/vim-scripts/sudo.vim) -Allows one to edit a file with prevledges from an unprivledged session
+  22. [a.vim](https://github.com/vim-scripts/a.vim) -Alternate Files quickly (.c --> .h etc)
 
 ## Shortcuts
 
