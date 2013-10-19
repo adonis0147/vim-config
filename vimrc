@@ -215,8 +215,8 @@ autocmd FileType python imap <F9> <esc>:w<cr>:!clear && python %<cr>
 autocmd FileType python nmap <F9> :w<cr>:!clear && python %<cr>
 autocmd FileType ruby imap <F9> <esc>:w<cr>:!clear && ruby %<cr>
 autocmd FileType ruby nmap <F9> :w<cr>:!clear && ruby %<cr>
-autocmd FileType sh imap <F9> <esc>:w<cr>:!clear && sh %<cr>
-autocmd FileType sh nmap <F9> :w<cr>:!clear && sh %<cr>
+autocmd FileType sh imap <F9> <esc>:w<cr>:!clear && bash %<cr>
+autocmd FileType sh nmap <F9> :w<cr>:!clear && bash %<cr>
 
 " Make
 autocmd FileType c,cpp imap <F5> <esc>:w<cr>:copen<cr>:make<cr>
