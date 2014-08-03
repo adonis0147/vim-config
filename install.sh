@@ -18,7 +18,3 @@ vim -c ":BundleInstall" -c "qa"
 cd ~/.vim/bundle/a.vim/plugin
 mv a.vim a.vim.bak
 sed '/imap/, +d' a.vim.bak > a.vim
-
-cd ~/.vim/bundle/clang_complete/plugin/
-mv clang_complete.vim clang_complete.vim.bak
-sed '/<buffer> <CR>/d' clang_complete.vim.bak > clang_complete.vim
