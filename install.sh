@@ -16,5 +16,3 @@ cp -rf indent ~/.vim
 vim -c ":BundleInstall" -c "qa"
 
 cd ~/.vim/bundle/a.vim/plugin
-mv a.vim a.vim.bak
-sed '/imap/, +d' a.vim.bak > a.vim
