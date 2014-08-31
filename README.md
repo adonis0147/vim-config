@@ -125,11 +125,15 @@ You can also reference the home page of [YouCompleteMe](http://valloric.github.i
       - `make`
       - `make install`
   2. Compile *YouCompleteMe*
-    - `cd ~`
-    - `mkdir ycm_build`
-    - `cd ycm_build`
-    - `cmake -G "Unix Makefiles" -DPATH_TO_LLVM_ROOT=~/ycm_temp/llvm_root_dir . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp`
-    - `make ycm_support_libs`
+    1. Clone YouCompleteMe:
+      - `cd ~/.vim/bundle`
+      - `git clone --recursive https://github.com/Valloric/YouCompleteMe`
+    2. Compile
+      - `cd ~`
+      - `mkdir ycm_build`
+      - `cd ycm_build`
+      - `cmake -G "Unix Makefiles" -DPATH_TO_LLVM_ROOT=~/ycm_temp/llvm_root_dir . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp`
+      - `make ycm_support_libs`
 
 ## References
 
