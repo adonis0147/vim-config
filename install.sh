@@ -6,6 +6,8 @@ mkdir backup
 mv ~/.vim ./backup/vim
 mv ~/.vimrc ./backup/vimrc
 
+sudo apt-get install xsel exuberant-ctags ack-grep
+
 git clone http://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
 cp vimrc ~/.vimrc
