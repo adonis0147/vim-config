@@ -106,7 +106,7 @@ For details, you can see [https://github.com/gmarik/vundle](https://github.com/g
 ## Remarks
 
 #### Full Installation Guide for *YouCompleteMe* On Unix-like Systems
-You can also reference the home page of [YouCompleteMe](http://valloric.github.io/YouCompleteMe/)
+You can also reference the home page of [YouCompleteMe](http://valloric.github.io/YouCompleteMe/).
 
   1. Compile *LLVM* and *Clang*
     1. Checkout LLVM:
