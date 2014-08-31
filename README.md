@@ -3,25 +3,30 @@
 ---------------------
 
 ## Dependencies
-
-  1. [xsel](http://www.kfish.org/software/xsel/)
-  2. [exuberant-ctags](http://ctags.sourceforge.net/)
-  3. [ack-grep](http://betterthangrep.com/)
+  1. Vim 7.3.584+ with python scripting support
+  2. [xsel](http://www.kfish.org/software/xsel/)
+  3. [exuberant-ctags](http://ctags.sourceforge.net/)
+  4. [ack-grep](http://betterthangrep.com/)
 
 ``` bash
 # For Debian/Ubuntu
-sudo apt-get install xsel exuberant-ctags ack-grep libclang-dev
+sudo apt-get install xsel exuberant-ctags ack-grep
 ```
 
 ## Installation
 
   1. Install the dependencies
   2. Run the install.sh
+  3. Run the install.sh in the extra folder (optional)
 
 ``` bash
 # For Debian/Ubuntu
-sudo apt-get install xsel exuberant-ctags ack-grep libclang-dev
-sh install.sh
+sudo apt-get install xsel exuberant-ctags ack-grep
+bash install.sh
+
+# optional (install YouCompleteMe)
+cd extra
+bash install.sh
 ```
 
 ## Plugins
@@ -36,18 +41,15 @@ sh install.sh
   8. [Vim-easymotion](https://github.com/Lokaltog/vim-easymotion) -Vim motions on speed!
   9. [Nerdtree](https://github.com/scrooloose/nerdtree) -A tree explorer plugin for vim
   10. [Tagbar](https://github.com/majutsushi/tagbar) -Vim plugin that displays tags in a window, ordered by class etc
-  11. [Syntastic](https://github.com/scrooloose/syntastic) -Syntax checking hacks for vim
-  12. [Vim-unimpaired](https://github.com/tpope/vim-unimpaired) -unimpaired.vim: pairs of handy bracket mappings
-  13. [Nerdcommenter](https://github.com/scrooloose/nerdcommenter) -Vim plugin for intensely orgasmic commenting
-  14. [Auto-pairs](https://github.com/jiangmiao/auto-pairs) -Vim plugin, insert or delete brackets, parens, quotes in pair
-  15. [Vim-surround](https://github.com/tpope/vim-surround) -Quoting/parenthesizing made simple
-  16. [Neocomplcache](https://github.com/Shougo/neocomplcache) -Ultimate auto-completion system for Vim
-  17. [Clang_complete](https://github.com/Rip-Rip/clang_complete) -Vim plugin that use clang for completing C/C++ code.
-  18. [Jedi-vim](https://github.com/davidhalter/jedi-vim) -Using the jedi autocompletion library for VIM.
-  19. [Emmet-vim](https://github.com/mattn/emmet-vim) -emmet for vim: http://emmet.io/ http://mattn.github.io/emmet-vim
-  20. [Ultisnips](https://github.com/SirVer/ultisnips) -This is an implementation of TextMates Snippets for the Vim Text Editor.
-  21. [sudo.vim](https://github.com/vim-scripts/sudo.vim) -Allows one to edit a file with prevledges from an unprivledged session
-  22. [a.vim](https://github.com/vim-scripts/a.vim) -Alternate Files quickly (.c --> .h etc)
+  11. [Nerdcommenter](https://github.com/scrooloose/nerdcommenter) -Vim plugin for intensely orgasmic commenting
+  12. [Auto-pairs](https://github.com/jiangmiao/auto-pairs) -Vim plugin, insert or delete brackets, parens, quotes in pair
+  13. [Vim-surround](https://github.com/tpope/vim-surround) -Quoting/parenthesizing made simple
+  14. [Emmet-vim](https://github.com/mattn/emmet-vim) -emmet for vim: http://emmet.io/ http://mattn.github.io/emmet-vim
+  15. [Ultisnips](https://github.com/SirVer/ultisnips) -This is an implementation of TextMates Snippets for the Vim Text Editor.
+  16. [a.vim](https://github.com/vim-scripts/a.vim) -Alternate Files quickly (.c --> .h etc)
+  17. [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) -A code-completion engine for Vim.  http://valloric.github.io/YouCompleteMe/
+
+**If you want to install _YouCompleteMe_, you should run the _install.sh_ in the extra folder.**
 
 ## Shortcuts
 
@@ -103,26 +105,34 @@ For details, you can see [https://github.com/gmarik/vundle](https://github.com/g
 
 ## Remarks
 
-  1. To edit a file with privileges from an unprivileged session.
-    ``` bash
-    # For example, we want to edit /etc/sudoers and type it in terminal:
-    sudo vim /etc/sudoers
-    # We will get a prompt - neocomplcache disabled: "sudo vim" is detected and $HOME is set to your user's home. You may want to use the sudo.vim plugin, the "-H" option with "sudo" or set always_set_home in /etc/sudoers instead.
+#### Full Installation Guide for *YouCompleteMe* On Unix-like Systems
+You can also reference the home page of [YouCompleteMe](http://valloric.github.io/YouCompleteMe/)
 
-    # Instead of typing "sudo vim /etc/sudoers" in terminal, we should type:
-    vim sudo:/etc/sudoers
-    ```
-  2. To check the syntax of some programing languages, we should install the check tools for those languages.
-    ```bash
-    # For example, Python requires either flake8, pyflakes or pylint.
-    # For Debian/Ubuntu
-    sudo apt-get install pyflakes
-    ```
-    For details, you can see [https://github.com/scrooloose/syntastic](https://github.com/scrooloose/syntastic).
+  1. Compile *LLVM* and *Clang*
+    1. Checkout LLVM:
+      - `svn co http://llvm.org/svn/llvm-project/llvm/trunk llvm`
+    2. Checkout Clang:
+      - `cd llvm/tools`
+      - `svn co http://llvm.org/svn/llvm-project/cfe/trunk clang`
+    3. Checkout Compiler-RT:
+      - `cd llvm/projects`
+      - `svn co http://llvm.org/svn/llvm-project/compiler-rt/trunk compiler-rt`
+    4. Compile
+      - `mkdir -p llvm/build`
+      - `cd llvm/build`
+      - `mkdir -p $HOME/ycm_temp/`
+      - `../configure --prefix=$HOME/ycm_temp/llvm_root_dir --enable-optimized`
+      - `make`
+      - `make install`
+  2. Compile *YouCompleteMe*
+    - `cd ~`
+    - `mkdir ycm_build`
+    - `cd ycm_build`
+    - `cmake -G "Unix Makefiles" -DPATH_TO_LLVM_ROOT=~/ycm_temp/llvm_root_dir . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp`
+    - `make ycm_support_libs`
 
 ## References
 
   1. [https://github.com/amix/vimrc](https://github.com/amix/vimrc)
   2. [https://github.com/mbrochh/vim-as-a-python-ide](https://github.com/mbrochh/vim-as-a-python-ide)
-  3. [https://github.com/humiaozuzu/dot-vimrc](https://github.com/humiaozuzu/dot-vimrc)
 
