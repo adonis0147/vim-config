@@ -25,6 +25,7 @@ sudo apt-get install xsel exuberant-ctags ack-grep
 bash install.sh
 
 # optional (install YouCompleteMe)
+sudo apt-get install cmake python-dev
 cd extra
 bash install.sh
 ```
