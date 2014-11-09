@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo apt-get install cmake python-dev
+
 sed -i "/a.vim/, +a Bundle 'Valloric/YouCompleteMe'" ~/.vim/plugins.vim
 
 cat ./config >> ~/.vim/plugins_config.vim
