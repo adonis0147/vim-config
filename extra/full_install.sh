@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo apt-get install cmake python-dev
+
 cd $HOME
 svn co http://llvm.org/svn/llvm-project/llvm/trunk llvm
 
