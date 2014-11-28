@@ -46,8 +46,6 @@ flags = [
 '/usr/include',
 '-isystem',
 '/usr/local/include',
-'-isystem',
-'/usr/include/c++/4.8/'
 ]
 
 

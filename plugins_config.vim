@@ -46,3 +46,5 @@ autocmd FileType tex let g:AutoPairs = {'(':')', '[':']', '{':'}', "`":"'"}
 " UltiSnips settings
 let g:UltiSnipsExpandTrigger = '<c-j>'
 let g:UltiSnipsSnippetsDir = '~/.vim/bundle/ultisnips/UltiSnips'
+
+
