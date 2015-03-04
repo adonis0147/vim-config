@@ -9,4 +9,4 @@ cd ~/.vim/bundle
 git clone --recursive https://github.com/Valloric/YouCompleteMe
 
 cd ~/.vim/bundle/YouCompleteMe
-./install.sh --clang-completer
+./install.sh --clang-completer --system-libclang
