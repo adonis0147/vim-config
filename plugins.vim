@@ -20,6 +20,7 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'jiangmiao/auto-pairs'
 Bundle 'tpope/vim-surround'
 Bundle 'mattn/emmet-vim'
+Bundle 'kevinw/pyflakes-vim'
 Bundle 'a.vim'
 
 filetype plugin indent on
