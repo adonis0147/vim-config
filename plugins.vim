@@ -21,6 +21,7 @@ Bundle 'jiangmiao/auto-pairs'
 Bundle 'tpope/vim-surround'
 Bundle 'mattn/emmet-vim'
 Bundle 'kevinw/pyflakes-vim'
+Bundle 'FelikZ/ctrlp-py-matcher'
 Bundle 'a.vim'
 
 filetype plugin indent on

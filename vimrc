@@ -33,7 +33,9 @@ set mouse=a
 " Encoding
 set encoding=utf-8
 set termencoding=utf-8
-set fileencodings=utf-8,gb2312
+set fileencodings=utf-8,cp936
+set langmenu=zh_CN.utf-8
+language messages zh_CN.utf-8
 
 " File formats
 set fileformats=unix,dos,mac
@@ -261,3 +263,13 @@ except:
     vim.command('echohl None')
 EOF
 endfunction
+
+" Set encoding automatically
+function! CheckFileEncoding()
+  if exists('b:fenc_at_read') && &fileencoding != b:fenc_at_read
+    exec 'e! ++enc=' . &fileencoding
+    unlet b:fenc_at_read
+  endif
+endfunction
+autocmd BufRead     * let b:fenc_at_read=&fileencoding
+autocmd BufWinEnter * call CheckFileEncoding()
