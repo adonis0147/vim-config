@@ -10,7 +10,7 @@
 
 ``` bash
 # For Debian/Ubuntu
-sudo apt-get install xsel exuberant-ctags ack-grep
+sudo apt-get install xsel exuberant-ctags ack-grep 
 ```
 
 ## Installation
@@ -27,6 +27,7 @@ bash install.sh
 # optional (install YouCompleteMe)
 sudo apt-get install cmake python-dev build-essential
 cd extra
+sudo apt-get install libclang-3.4-dev
 bash install.sh
 ```
 
