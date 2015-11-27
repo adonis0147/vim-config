@@ -59,8 +59,7 @@ function! s:ActivateAutoCommand()
     autocmd InsertEnter <buffer> call s:ShowPyflakesMessage()
 
     autocmd CursorHold <buffer> call s:ShowPyflakesMessage()
-    autocmd CursorHoldI <buffer> call s:ShowPyflakesMessage()
-
+    
     function! s:ShowPyflakesMessage()
         if b:showing_message == 1
             return
