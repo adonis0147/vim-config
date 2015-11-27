@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo apt-get install cmake python-dev build-essential
+
 sed -i "/YouCompleteMe/, +d" ~/.vim/plugins.vim
 sed -i "/a.vim/, +a Bundle 'Valloric/YouCompleteMe'" ~/.vim/plugins.vim
 
