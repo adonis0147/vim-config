@@ -17,4 +17,4 @@ vim -c ":BundleInstall" -c "qa"
 
 cd ~/.vim/bundle/a.vim/plugin
 mv a.vim a.vim.bak
-sed '/imap/, +d' a.vim.bak > a.vim
+sed '/imap/d' a.vim.bak > a.vim
