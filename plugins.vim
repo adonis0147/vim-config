@@ -2,26 +2,17 @@
 autocmd! bufwritepost plugins.vim source %
 
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+let g:plug_threads=1
+call plug#begin('~/.vim/plugged/')
 
 " Add plugins here.
-Bundle 'gmarik/vundle'
-Bundle 'tomasr/molokai'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'zhaocai/GoldenView.Vim'
-Bundle 'adonis0147/prettyGuides'
-Bundle 'kien/ctrlp.vim'
-Bundle 'mileszs/ack.vim'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'scrooloose/nerdtree'
-Bundle 'majutsushi/tagbar'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'jiangmiao/auto-pairs'
-Bundle 'tpope/vim-surround'
-Bundle 'mattn/emmet-vim'
-Bundle 'kevinw/pyflakes-vim'
-Bundle 'FelikZ/ctrlp-py-matcher'
-Bundle 'a.vim'
+Plug 'tomasr/molokai'
+Plug 'itchyny/lightline.vim'
+Plug 'zhaocai/GoldenView.Vim'
+Plug 'kien/ctrlp.vim' | Plug 'adonis0147/ctrlp-cIndexer', {'do': './install.sh'}
+Plug 'FelikZ/ctrlp-py-matcher'
+Plug 'Raimondi/delimitMate'
 
+call plug#end()
 filetype plugin indent on
+
