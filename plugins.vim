@@ -3,7 +3,7 @@ autocmd! bufwritepost plugins.vim source %
 
 filetype off
 let g:plug_threads=1
-call plug#begin('~/.vim/plugged/')
+call plug#begin('~/.vim/bundle/')
 
 " Add plugins here.
 Plug 'tomasr/molokai'
