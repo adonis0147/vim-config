@@ -20,10 +20,32 @@ nmap <silent> <leader>s <Plug>GoldenViewSwitchMain
 nmap <silent> <leader>S <Plug>GoldenViewSwitchToggle
 
 
+" NERDTree settings
+nnoremap <F3> :NERDTreeToggle<cr>
+let NERDTreeIgnore=['.o$[[file]]', '.class$[[file]]', '.git$[[dir]]']
+
+
+" Tagbar settings
+nnoremap <F4> :TagbarToggle<cr>
+
+
+" delimitMate settings
+autocmd FileType python let b:delimitMate_nesting_quotes = ['"']
+imap <c-d> <Plug>delimitMateS-Tab
+
+
 " Pyflakes-vim settings
 let b:qf_list = []
 let b:showing_message = 0
 autocmd FileType python :call s:ActivateAutoCommand()
+
+
+" vim-easy-align settings
+" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
+vmap <Enter> <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
 
 function! s:ActivateAutoCommand()
     set updatetime=1000
