@@ -15,10 +15,17 @@ Plug 'Raimondi/delimitMate'
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
-Plug 'kevinw/pyflakes-vim', {'for': 'python'}
+Plug 'tpope/vim-repeat'
+Plug 'terryma/vim-multiple-cursors'
 Plug 'hdima/python-syntax', {'for': 'python'}
 Plug 'majutsushi/tagbar', {'on': 'TagbarToggle'}
 Plug 'junegunn/vim-easy-align'
+Plug 'mattn/emmet-vim', {'for': ['html', 'xhtml', 'xml']}
+Plug 'honza/vim-snippets' | Plug 'SirVer/ultisnips'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'ap/vim-buftabline'
+Plug 'a.vim'
+Plug 'jeroenbourgois/vim-actionscript'
 
 call plug#end()
 filetype plugin indent on

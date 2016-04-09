@@ -3,6 +3,7 @@ autocmd! bufwritepost plugins_config.vim source %
 
 let mapleader=","
 
+let python_highlight_all = 1
 
 " CtrlP settings
 let g:ctrlp_map = '<leader>f'
@@ -34,10 +35,8 @@ autocmd FileType python let b:delimitMate_nesting_quotes = ['"']
 imap <c-d> <Plug>delimitMateS-Tab
 
 
-" Pyflakes-vim settings
-let b:qf_list = []
-let b:showing_message = 0
-autocmd FileType python :call s:ActivateAutoCommand()
+" UltiSnips settings
+let g:UltiSnipsExpandTrigger = '<c-j>'
 
 
 " vim-easy-align settings
@@ -46,30 +45,6 @@ vmap <Enter> <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
-
-function! s:ActivateAutoCommand()
-    set updatetime=1000
-    autocmd InsertLeave <buffer> call s:ShowPyflakesMessage()
-    autocmd InsertEnter <buffer> call s:ShowPyflakesMessage()
-
-    autocmd CursorHold <buffer> call s:ShowPyflakesMessage()
-
-    function! s:ShowPyflakesMessage()
-        if b:showing_message == 1
-            return
-        endif
-
-        let l:num_error = len(b:qf_list)
-        let l:error = ' errors'
-        if l:num_error > 0
-            if l:num_error == 1
-                let l:error = ' error'
-            endif
-            let l:msg = 'pyflakes detects ' . l:num_error . l:error . '!'
-            echohl ErrorMsg | echo l:msg | echohl None
-        endif
-    endfunction
-endfunction
 
 " lightline settings
 let g:lightline = {
@@ -200,5 +175,3 @@ endfunction
 let g:unite_force_overwrite_statusline = 0
 let g:vimfiler_force_overwrite_statusline = 0
 let g:vimshell_force_overwrite_statusline = 0
-
-
