@@ -1,19 +1,14 @@
 #!/bin/sh
 
-PROFILES_PATH=/apps/gnome-terminal/profiles
-USE_SYSTEM_FONT=$PROFILES_PATH/Default/use_system_font
-FONT=$PROFILES_PATH/Default/font
-USE_THEME_COLORS=$PROFILES_PATH/Default/use_theme_colors
-BACKGROUND_TYPE=$PROFILES_PATH/Default/background_type
-BACKGROUND_DARKNESS=$PROFILES_PATH/Default/background_darkness
-BACKGROUND_COLOR=$PROFILES_PATH/Default/background_color
-FOREGROUND_COLOR=$PROFILES_PATH/Default/foreground_color
+PROFILE=$(gsettings get org.gnome.Terminal.ProfilesList default)
+PROFILE=${PROFILE:1:-1}
+PROFILE_SETTING="org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$PROFILE/"
 
+gsettings set $PROFILE_SETTING use-transparent-background true
+gsettings set $PROFILE_SETTING background-transparency-percent 15
+gsettings set $PROFILE_SETTING use-system-font false
+gsettings set $PROFILE_SETTING font 'Courier 10 Pitch 13'
+gsettings set $PROFILE_SETTING use-theme-colors false
+gsettings set $PROFILE_SETTING foreground-color '#D0D0D0'
+gsettings set $PROFILE_SETTING background-color '#121212'
 
-gconftool -s -t bool $USE_SYSTEM_FONT false
-gconftool -s -t string $FONT Courier\ 10\ Pitch\ 13
-gconftool -s -t bool $USE_THEME_COLORS false
-gconftool -s -t string $BACKGROUND_TYPE transparent
-gconftool -s -t float $BACKGROUND_DARKNESS 0.85
-gconftool -s -t string $BACKGROUND_COLOR \#121212
-gconftool -s -t string $FOREGROUND_COLOR \#D0D0D0
