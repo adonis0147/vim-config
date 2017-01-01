@@ -38,7 +38,7 @@ set langmenu=zh_CN.utf-8
 language messages zh_CN.utf-8
 
 " File formats
-set fileformats=unix,dos,mac
+set fileformats=unix,mac,dos
 
 " timeout
 set timeoutlen=500
@@ -50,7 +50,7 @@ set hidden
 set pastetoggle=<F2>
 
 " Set the clipboard
-"set clipboard=unnamedplus
+set clipboard=unnamed
 
 " History
 set history=700
@@ -103,10 +103,10 @@ highlight Conceal ctermbg=None
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Text width
-set textwidth=80
+set textwidth=120
 
-" Color the column 80
-set colorcolumn=80
+" Color the column 120
+set colorcolumn=120
 highlight ColorColumn ctermbg=235
 highlight link OverLength ColorColumn
 exec 'match OverLength /\%'.&cc.'v.\+/'
@@ -117,8 +117,8 @@ set nowrap
 " Don't automatically wrap text when typing
 set fo-=t
 
-" Use spaces instead of tabs
-set expandtab
+" Use tabs instead of spaces
+set noexpandtab
 
 " Be smart when using tabs
 set smarttab
@@ -171,7 +171,7 @@ map k gk
 noremap <silent> <leader><cr> :noh<cr>
 
 " Quick quit command
-nnoremap <leader>e :quit<cr>
+nnoremap <leader>e :bdelete<cr>
 nnoremap <leader>E :qa!<cr>
 
 " Easier moving between windows
@@ -197,6 +197,7 @@ vnoremap <c-c> y:call CopyToClipboard()<cr>
 
 " Indent
 autocmd FileType c,cpp set cindent
+autocmd FileType c,cpp setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType html,xhtml setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType css setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2
@@ -253,7 +254,7 @@ import vim
 from subprocess import Popen, PIPE
 
 try:
-    p = Popen(['xsel', '-bi'], stdin=PIPE)
+    p = Popen(['pbcopy'], stdin=PIPE)
     p.communicate(input=vim.eval('@0'))
     print('yanked')
 except:
@@ -273,3 +274,4 @@ function! CheckFileEncoding()
 endfunction
 autocmd BufRead     * let b:fenc_at_read=&fileencoding
 autocmd BufWinEnter * call CheckFileEncoding()
+
