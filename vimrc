@@ -189,7 +189,9 @@ vnoremap < <gv
 vnoremap > >gv
 
 " Copy content to clipboard
-vnoremap <c-c> y:call CopyToClipboard()<cr>
+if has('unix')
+	vnoremap <c-c> y:call CopyToClipboard()<cr>
+end
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                 Autocmd, Helper Functions                "

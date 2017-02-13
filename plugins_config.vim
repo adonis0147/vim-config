@@ -20,7 +20,8 @@ let g:ctrlp_max_files = 0
 let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_working_path_mode = 'rw'
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
-let g:cIndexer_custom_ignore_extensions = ['sfx', 'gim', 'gis', 'ags', 'mesh', 'mtg', 'nfx', 'ps', 'vs', 'ter', 'cache']
+let g:cIndexer_custom_ignore_extensions = ['sfx', 'gim', 'gis', 'ags', 'mesh', 'mtg', 'ter', 'cache', 'col']
+let g:cIndexer_custom_ignore_directories = ['client/engine', 'server/script/com', 'server/mongodb', 'server/com']
 nnoremap <leader>b :CtrlPBuffer<cr>
 
 " delimitMate settings
@@ -41,8 +42,34 @@ vmap <Enter> <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " python-syntax settings
+let python_highlight_space_errors = 0
 let python_highlight_all = 1
 
 " ultisnips settings
 let g:UltiSnipsExpandTrigger = '<c-j>'
 
+" YouCompleteMe setting
+nnoremap <leader>g :YcmCompleter GoTo<CR>
+let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
+let g:ycm_confirm_extra_conf = 0
+let g:ycm_seed_identifiers_with_syntax = 1
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
+let g:ycm_filetype_blacklist = {
+    \ 'tagbar'   : 1,
+    \ 'qf'       : 1,
+    \ 'notes'    : 1,
+    \ 'markdown' : 1,
+    \ 'unite'    : 1,
+    \ 'text'     : 1,
+    \ 'vimwiki'  : 1,
+    \ 'pandoc'   : 1,
+    \ 'infolog'  : 1,
+    \ 'mail'     : 1,
+    \ 'searcher' : 1
+    \}
+
+" pyflakes-vim settings
+try
+	source ~/.vim/settings/pyflakes_settings.vim
+catch
+endtry

@@ -21,7 +21,10 @@ Plug 'junegunn/vim-easy-align'
 Plug 'mattn/emmet-vim', {'for': ['html', 'xhtml', 'xml']}
 Plug 'honza/vim-snippets' | Plug 'SirVer/ultisnips'
 Plug 'hdima/python-syntax', {'for': 'python'}
-Plug 'adonis0147/a.vim'
+Plug 'adonis0147/a.vim', {'for': ['c', 'cpp', 'cc']}
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'Valloric/YouCompleteMe', {'do': 'python install.py --clang-completer'}
+Plug 'adonis0147/pyflakes-vim', {'for': 'python'}
 
 call plug#end()
 
