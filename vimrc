@@ -91,9 +91,9 @@ set t_Co=256
 
 " colorscheme
 try
-	colorscheme molokai
+    colorscheme molokai
 catch
-	colorscheme desert
+    colorscheme desert
 endtry
 highlight MatchParen ctermbg=None ctermfg=Red cterm=bold
 highlight Conceal ctermbg=None
@@ -190,7 +190,7 @@ vnoremap > >gv
 
 " Copy content to clipboard
 if has('unix')
-	vnoremap <c-c> y:call CopyToClipboard()<cr>
+    vnoremap <c-c> y:call CopyToClipboard()<cr>
 end
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -253,17 +253,25 @@ endfunction
 function! CopyToClipboard()
 python << EOF
 import vim
+import platform
 from subprocess import Popen, PIPE
 
+args = []
+info = platform.platform()
+if info.startswith('Darwin'):
+    args = ['pbcopy']
+elif info.startswith('Linux'):
+    args = ['xsel', '-bi']
+
 try:
-    p = Popen(['pbcopy'], stdin=PIPE)
-    p.communicate(input=vim.eval('@0'))
-    print('yanked')
+	p = Popen(args, stdin=PIPE)
+	p.communicate(input=vim.eval('@0'))
+	print('yanked')
 except:
-    vim.command('echohl Error')
-    error = "The content isn't yanked, please install xsel to your system."
-    vim.command('echoerr "%s"' % error)
-    vim.command('echohl None')
+	vim.command('echohl Error')
+	error = "The content isn't yanked, please install xsel to your system."
+	vim.command('echoerr "%s"' % error)
+	vim.command('echohl None')
 EOF
 endfunction
 
