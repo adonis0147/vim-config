@@ -214,8 +214,8 @@ autocmd FileType markdown highlight clear ColorColumn
 " Build and run(just available for a single source code)
 autocmd FileType c imap <F9> <esc>:w<cr>:!clear && gcc % -o %< && ./%<<cr>
 autocmd FileType c nmap <F9> :w<cr>:!clear && gcc % -o %< && ./%<<cr>
-autocmd FileType cpp imap <F9> <esc>:w<cr>:!clear && g++ % -o %< && ./%<<cr>
-autocmd FileType cpp nmap <F9> :w<cr>:!clear && g++ % -o %< && ./%<<cr>
+autocmd FileType cpp imap <F9> <esc>:w<cr>:!clear && g++ --std=c++11 % -o %< && ./%<<cr>
+autocmd FileType cpp nmap <F9> :w<cr>:!clear && g++ --std=c++11 % -o %< && ./%<<cr>
 autocmd FileType python imap <F9> <esc>:w<cr>:!clear && python %<cr>
 autocmd FileType python nmap <F9> :w<cr>:!clear && python %<cr>
 autocmd FileType ruby imap <F9> <esc>:w<cr>:!clear && ruby %<cr>
