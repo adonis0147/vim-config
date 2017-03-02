@@ -47,6 +47,7 @@ let python_highlight_all = 1
 
 " ultisnips settings
 let g:UltiSnipsExpandTrigger = '<c-j>'
+let g:UltiSnipsSnippetsDir = '~/.vim/bundle/vim-snippets/UltiSnips'
 
 " YouCompleteMe setting
 nnoremap <leader>g :YcmCompleter GoTo<CR>
