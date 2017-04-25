@@ -141,6 +141,10 @@ set smartindent
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
+" Show indent line
+set list
+set listchars=tab:¦\ ,
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                           Search                         "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -205,6 +209,7 @@ autocmd FileType css setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType php setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
+autocmd FileType python setlocal noexpandtab tabstop=4 softtabstop=4 shiftwidth=4
 
 " Colorcolumn
 autocmd FileType php setlocal textwidth=120 colorcolumn=120
