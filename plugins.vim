@@ -25,6 +25,7 @@ Plug 'adonis0147/a.vim', {'for': ['c', 'cpp', 'cc']}
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'Valloric/YouCompleteMe', {'do': 'python install.py --clang-completer'}
 Plug 'adonis0147/pyflakes-vim', {'for': 'python'}
+Plug 'fatih/vim-go', {'for': 'go'}
 
 call plug#end()
 

@@ -227,6 +227,8 @@ autocmd FileType ruby imap <F9> <esc>:w<cr>:!clear && ruby %<cr>
 autocmd FileType ruby nmap <F9> :w<cr>:!clear && ruby %<cr>
 autocmd FileType sh imap <F9> <esc>:w<cr>:!clear && bash %<cr>
 autocmd FileType sh nmap <F9> :w<cr>:!clear && bash %<cr>
+autocmd FileType go imap <F9> <esc>:w<cr>:!clear && go run %<cr>
+autocmd FileType go nmap <F9> :w<cr>:!clear && go run %<cr>
 
 " Make
 autocmd FileType c,cpp imap <F5> <esc>:w<cr>:copen<cr>:make<cr>
