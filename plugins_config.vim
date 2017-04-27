@@ -35,6 +35,9 @@ let NERDTreeIgnore=['.o$[[file]]', '.class$[[file]]', '.git$[[dir]]']
 " tagbar settings
 nnoremap <F4> :TagbarToggle<cr>
 
+" vim-sneak settings
+let g:sneak#label = 1
+
 " vim-easy-align settings
 " Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
 vmap <Enter> <Plug>(EasyAlign)

@@ -16,7 +16,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'majutsushi/tagbar', {'on': 'TagbarToggle'}
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
-Plug 'Lokaltog/vim-easymotion'
+Plug 'justinmk/vim-sneak'
 Plug 'junegunn/vim-easy-align'
 Plug 'mattn/emmet-vim', {'for': ['html', 'xhtml', 'xml']}
 Plug 'honza/vim-snippets' | Plug 'SirVer/ultisnips'
