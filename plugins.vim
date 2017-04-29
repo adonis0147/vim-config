@@ -8,7 +8,7 @@ Plug 'tomasr/molokai'
 Plug 'itchyny/lightline.vim'
 Plug 'zhaocai/GoldenView.Vim'
 Plug 'ap/vim-buftabline'
-Plug 'kien/ctrlp.vim' | Plug 'adonis0147/ctrlp-cIndexer', {'do': './install.sh'}
+Plug 'adonis0147/ctrlp.vim' | Plug 'adonis0147/ctrlp-cIndexer', {'do': 'python install.py'}
 Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'Raimondi/delimitMate'
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
