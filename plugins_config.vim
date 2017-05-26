@@ -34,6 +34,16 @@ let NERDTreeIgnore=['.o$[[file]]', '.class$[[file]]', '.git$[[dir]]']
 
 " tagbar settings
 nnoremap <F4> :TagbarToggle<cr>
+let g:tagbar_type_go = {
+    \ 'ctagstype': 'go',
+    \ 'kinds' : [
+        \'p:package',
+        \'f:function',
+        \'v:variables',
+        \'t:type',
+        \'c:const'
+    \]
+\}
 
 " vim-sneak settings
 let g:sneak#label = 1
