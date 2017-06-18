@@ -1,6 +1,3 @@
-" Automatically source the plugins_config.vim when it is saved
-autocmd! bufwritepost plugins_config.vim source %
-
 let mapleader=","
 
 " lightline settings

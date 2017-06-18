@@ -1,6 +1,3 @@
-" Automatically source the plugins.vim when it is saved
-autocmd! bufwritepost plugins.vim source %
-
 call plug#begin('~/.vim/bundle/')
 
 " Add plugins here.
@@ -9,6 +6,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'zhaocai/GoldenView.Vim'
 Plug 'ap/vim-buftabline'
 Plug 'adonis0147/ctrlp.vim' | Plug 'adonis0147/ctrlp-cIndexer', {'do': 'python install.py'}
+Plug 'adonis0147/searcher.vim'
 Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'Raimondi/delimitMate'
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}

@@ -16,6 +16,9 @@ endtry
 " Automatically source the .vimrc when it is saved
 autocmd! bufwritepost .vimrc source %
 
+" Automatically source the *.vim when it is saved
+autocmd! bufwritepost *.vim source %
+
 " Not compatible with vi
 set nocompatible
 
