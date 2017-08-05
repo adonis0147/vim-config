@@ -16,6 +16,9 @@ endtry
 " Automatically source the .vimrc when it is saved
 autocmd! bufwritepost .vimrc source %
 
+" Automatically source the *.vim when it is saved
+autocmd! bufwritepost *.vim source %
+
 " Not compatible with vi
 set nocompatible
 
@@ -38,7 +41,7 @@ set langmenu=zh_CN.utf-8
 language messages zh_CN.utf-8
 
 " File formats
-set fileformats=unix,dos,mac
+set fileformats=unix,mac,dos
 
 " timeout
 set timeoutlen=500
@@ -50,7 +53,7 @@ set hidden
 set pastetoggle=<F2>
 
 " Set the clipboard
-"set clipboard=unnamedplus
+"set clipboard=unnamed
 
 " History
 set history=700
@@ -91,9 +94,9 @@ set t_Co=256
 
 " colorscheme
 try
-	colorscheme molokai
+    colorscheme molokai
 catch
-	colorscheme desert
+    colorscheme desert
 endtry
 highlight MatchParen ctermbg=None ctermfg=Red cterm=bold
 highlight Conceal ctermbg=None
@@ -103,10 +106,10 @@ highlight Conceal ctermbg=None
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Text width
-set textwidth=80
+set textwidth=120
 
-" Color the column 80
-set colorcolumn=80
+" Color the column 120
+set colorcolumn=120
 highlight ColorColumn ctermbg=235
 highlight link OverLength ColorColumn
 exec 'match OverLength /\%'.&cc.'v.\+/'
@@ -117,8 +120,8 @@ set nowrap
 " Don't automatically wrap text when typing
 set fo-=t
 
-" Use spaces instead of tabs
-set expandtab
+" Use tabs instead of spaces
+set noexpandtab
 
 " Be smart when using tabs
 set smarttab
@@ -140,6 +143,10 @@ set smartindent
 " Backspace
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
+
+" Show indent line
+set list
+set listchars=tab:¦\ ,
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                           Search                         "
@@ -171,7 +178,7 @@ map k gk
 noremap <silent> <leader><cr> :noh<cr>
 
 " Quick quit command
-nnoremap <leader>e :quit<cr>
+nnoremap <leader>e :bdelete<cr>
 nnoremap <leader>E :qa!<cr>
 
 " Easier moving between windows
@@ -189,7 +196,9 @@ vnoremap < <gv
 vnoremap > >gv
 
 " Copy content to clipboard
-vnoremap <c-c> y:call CopyToClipboard()<cr>
+if has('unix')
+    vnoremap <c-c> y:call CopyToClipboard()<cr>
+end
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                 Autocmd, Helper Functions                "
@@ -197,11 +206,13 @@ vnoremap <c-c> y:call CopyToClipboard()<cr>
 
 " Indent
 autocmd FileType c,cpp set cindent
+autocmd FileType c,cpp setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType html,xhtml setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType css setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType php setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
+autocmd FileType python setlocal noexpandtab tabstop=4 softtabstop=4 shiftwidth=4
 
 " Colorcolumn
 autocmd FileType php setlocal textwidth=120 colorcolumn=120
@@ -211,14 +222,16 @@ autocmd FileType markdown highlight clear ColorColumn
 " Build and run(just available for a single source code)
 autocmd FileType c imap <F9> <esc>:w<cr>:!clear && gcc % -o %< && ./%<<cr>
 autocmd FileType c nmap <F9> :w<cr>:!clear && gcc % -o %< && ./%<<cr>
-autocmd FileType cpp imap <F9> <esc>:w<cr>:!clear && g++ % -o %< && ./%<<cr>
-autocmd FileType cpp nmap <F9> :w<cr>:!clear && g++ % -o %< && ./%<<cr>
+autocmd FileType cpp imap <F9> <esc>:w<cr>:!clear && g++ --std=c++11 % -o %< && ./%<<cr>
+autocmd FileType cpp nmap <F9> :w<cr>:!clear && g++ --std=c++11 % -o %< && ./%<<cr>
 autocmd FileType python imap <F9> <esc>:w<cr>:!clear && python %<cr>
 autocmd FileType python nmap <F9> :w<cr>:!clear && python %<cr>
 autocmd FileType ruby imap <F9> <esc>:w<cr>:!clear && ruby %<cr>
 autocmd FileType ruby nmap <F9> :w<cr>:!clear && ruby %<cr>
 autocmd FileType sh imap <F9> <esc>:w<cr>:!clear && bash %<cr>
 autocmd FileType sh nmap <F9> :w<cr>:!clear && bash %<cr>
+autocmd FileType go imap <F9> <esc>:w<cr>:!clear && go run %<cr>
+autocmd FileType go nmap <F9> :w<cr>:!clear && go run %<cr>
 
 " Make
 autocmd FileType c,cpp imap <F5> <esc>:w<cr>:copen<cr>:make<cr>
@@ -250,17 +263,25 @@ endfunction
 function! CopyToClipboard()
 python << EOF
 import vim
+import platform
 from subprocess import Popen, PIPE
 
+args = []
+info = platform.platform()
+if info.startswith('Darwin'):
+    args = ['pbcopy']
+elif info.startswith('Linux'):
+    args = ['xsel', '-bi']
+
 try:
-    p = Popen(['xsel', '-bi'], stdin=PIPE)
-    p.communicate(input=vim.eval('@0'))
-    print('yanked')
+	p = Popen(args, stdin=PIPE)
+	p.communicate(input=vim.eval('@0'))
+	print('yanked')
 except:
-    vim.command('echohl Error')
-    error = "The content isn't yanked, please install xsel to your system."
-    vim.command('echoerr "%s"' % error)
-    vim.command('echohl None')
+	vim.command('echohl Error')
+	error = "The content isn't yanked, please install xsel to your system."
+	vim.command('echoerr "%s"' % error)
+	vim.command('echohl None')
 EOF
 endfunction
 
@@ -273,3 +294,4 @@ function! CheckFileEncoding()
 endfunction
 autocmd BufRead     * let b:fenc_at_read=&fileencoding
 autocmd BufWinEnter * call CheckFileEncoding()
+

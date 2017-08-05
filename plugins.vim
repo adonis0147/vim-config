@@ -1,27 +1,29 @@
-" Automatically source the plugins.vim when it is saved
-autocmd! bufwritepost plugins.vim source %
-
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call plug#begin('~/.vim/bundle/')
 
 " Add plugins here.
-Bundle 'gmarik/vundle'
-Bundle 'tomasr/molokai'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'zhaocai/GoldenView.Vim'
-Bundle 'adonis0147/prettyGuides'
-Bundle 'kien/ctrlp.vim'
-Bundle 'mileszs/ack.vim'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'scrooloose/nerdtree'
-Bundle 'majutsushi/tagbar'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'jiangmiao/auto-pairs'
-Bundle 'tpope/vim-surround'
-Bundle 'mattn/emmet-vim'
-Bundle 'kevinw/pyflakes-vim'
-Bundle 'FelikZ/ctrlp-py-matcher'
-Bundle 'a.vim'
+Plug 'tomasr/molokai'
+Plug 'itchyny/lightline.vim'
+Plug 'zhaocai/GoldenView.Vim'
+Plug 'ap/vim-buftabline'
+Plug 'adonis0147/ctrlp.vim' | Plug 'adonis0147/ctrlp-cIndexer', {'do': 'python install.py'}
+Plug 'adonis0147/searcher.vim'
+Plug 'FelikZ/ctrlp-py-matcher'
+Plug 'Raimondi/delimitMate'
+Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
+Plug 'scrooloose/nerdcommenter'
+Plug 'majutsushi/tagbar', {'on': 'TagbarToggle'}
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'justinmk/vim-sneak'
+Plug 'junegunn/vim-easy-align'
+Plug 'mattn/emmet-vim', {'for': ['html', 'xhtml', 'xml']}
+Plug 'honza/vim-snippets' | Plug 'SirVer/ultisnips'
+Plug 'hdima/python-syntax', {'for': 'python'}
+Plug 'adonis0147/a.vim', {'for': ['c', 'cpp', 'cc']}
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'Valloric/YouCompleteMe', {'do': 'python install.py --clang-completer'}
+Plug 'adonis0147/pyflakes-vim', {'for': 'python'}
+Plug 'fatih/vim-go'
 
-filetype plugin indent on
+call plug#end()
+
