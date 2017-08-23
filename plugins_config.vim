@@ -55,6 +55,9 @@ nmap ga <Plug>(EasyAlign)
 let python_highlight_space_errors = 0
 let python_highlight_all = 1
 
+" vim-gutentags settings
+let g:gutentags_cache_dir = "~/.cache/ctags"
+
 " ultisnips settings
 let g:UltiSnipsExpandTrigger = '<c-j>'
 let g:UltiSnipsSnippetsDir = '~/.vim/bundle/vim-snippets/UltiSnips'
