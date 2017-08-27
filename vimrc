@@ -64,6 +64,9 @@ set undolevels=700
 " Don't redraw while executing macros
 "set lazyredraw
 
+" Scroll
+set scrolloff=7
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                      User Interface                      "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
