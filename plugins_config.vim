@@ -7,6 +7,9 @@ catch
 endtry
 
 " GoldenView settings
+if &diff
+	let g:goldenview__enable_at_startup = 0
+endif
 let g:goldenview__enable_default_mapping = 0
 nmap <silent> <leader>s <Plug>GoldenViewSwitchMain
 nmap <silent> <leader>S <Plug>GoldenViewSwitchToggle
