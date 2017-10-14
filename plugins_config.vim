@@ -58,6 +58,12 @@ let python_highlight_all = 1
 " vim-gutentags settings
 let g:gutentags_cache_dir = "~/.cache/ctags"
 
+" vim-quickhl settings
+nmap <Space>m <Plug>(quickhl-manual-this)
+xmap <Space>m <Plug>(quickhl-manual-this)
+nmap <Space>M <Plug>(quickhl-manual-reset)
+xmap <Space>M <Plug>(quickhl-manual-reset)
+
 " ultisnips settings
 let g:UltiSnipsExpandTrigger = '<c-j>'
 let g:UltiSnipsSnippetsDir = '~/.vim/bundle/vim-snippets/UltiSnips'

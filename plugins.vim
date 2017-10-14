@@ -22,6 +22,7 @@ Plug 'adonis0147/a.vim', {'for': ['c', 'cpp', 'cc']}
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'adonis0147/pyflakes-vim', {'for': 'python'}
 Plug 'fatih/vim-go'
+Plug 't9md/vim-quickhl'
 
 if !&diff
 	Plug 'zhaocai/GoldenView.Vim'
