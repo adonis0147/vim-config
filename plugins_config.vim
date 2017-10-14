@@ -63,6 +63,14 @@ nmap <Space>m <Plug>(quickhl-manual-this)
 xmap <Space>m <Plug>(quickhl-manual-this)
 nmap <Space>M <Plug>(quickhl-manual-reset)
 xmap <Space>M <Plug>(quickhl-manual-reset)
+let g:quickhl_manual_colors = [
+	\ 'ctermbg=cyan    ctermfg=black guibg=#8CCBEA guifg=black',
+	\ 'ctermbg=green   ctermfg=black guibg=#A4E57E guifg=black',
+	\ 'ctermbg=yellow  ctermfg=black guibg=#FFDB72 guifg=black',
+	\ 'ctermbg=red     ctermfg=black guibg=#FF7272 guifg=black',
+	\ 'ctermbg=magenta ctermfg=black guibg=#FFB3FF guifg=black',
+	\ 'ctermbg=blue    ctermfg=black guibg=#9999FF guifg=black',
+	\ ]
 
 " ultisnips settings
 let g:UltiSnipsExpandTrigger = '<c-j>'
