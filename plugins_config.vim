@@ -59,8 +59,8 @@ let python_highlight_all = 1
 let g:gutentags_cache_dir = "~/.cache/ctags"
 
 " vim-quickhl settings
-nmap <Space>m <Plug>(quickhl-manual-this)
-xmap <Space>m <Plug>(quickhl-manual-this)
+nmap <Space>m <Plug>(quickhl-manual-this-whole-word)
+xmap <Space>m <Plug>(quickhl-manual-this-whole-word)
 nmap <Space>M <Plug>(quickhl-manual-reset)
 xmap <Space>M <Plug>(quickhl-manual-reset)
 let g:quickhl_manual_colors = [
