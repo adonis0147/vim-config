@@ -8,8 +8,8 @@ endtry
 
 " GoldenView settings
 let g:goldenview__enable_default_mapping = 0
-nmap <silent> <leader>s <Plug>GoldenViewSwitchMain
-nmap <silent> <leader>S <Plug>GoldenViewSwitchToggle
+nmap <silent> <space>s <Plug>GoldenViewSwitchMain
+nmap <silent> <space>S <Plug>GoldenViewSwitchToggle
 
 " ctrlp settings
 let g:ctrlp_map = '<leader>f'
