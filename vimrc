@@ -216,6 +216,8 @@ autocmd FileType javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType php setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType python setlocal noexpandtab tabstop=4 softtabstop=4 shiftwidth=4
+autocmd FileType sh setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
+autocmd FileType markdown setlocal expandtab
 
 " Colorcolumn
 autocmd FileType php setlocal textwidth=120 colorcolumn=120
