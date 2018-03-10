@@ -100,7 +100,9 @@ let g:ycm_filetype_blacklist = {
 let g:pyflakes_use_quickfix = 1
 let b:qf_list = []
 let b:showing_message = 0
-autocmd FileType python :call s:ActivateAutoCommand()
+if !has('python3')
+	autocmd FileType python :call s:ActivateAutoCommand()
+end
 
 function! s:ActivateAutoCommand()
   set updatetime=1000
