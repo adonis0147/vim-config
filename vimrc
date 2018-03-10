@@ -266,8 +266,23 @@ endfunction
 
 " Copy content to clipboard
 function! CopyToClipboard()
-python << EOF
+let s:python_util_eof = has('python3') ? 'python3 << EOF' : 'python << EOF'
+
+if has('python3')
+exec s:python_util_eof
 import vim
+import locale
+encoding = locale.getdefaultlocale()[-1]
+input = vim.eval('@0').encode(encoding)
+EOF
+else
+exec s:python_util_eof
+import vim
+input = vim.eval('@0')
+EOF
+end
+
+exec s:python_util_eof
 import platform
 from subprocess import Popen, PIPE
 
@@ -280,11 +295,11 @@ elif info.startswith('Linux'):
 
 try:
 	p = Popen(args, stdin=PIPE)
-	p.communicate(input=vim.eval('@0'))
+	p.communicate(input=input)
 	print('yanked')
 except:
 	vim.command('echohl Error')
-	error = "The content isn't yanked, please install xsel to your system."
+	error = "The content isn't yanked, please install %s to your system." % args[0]
 	vim.command('echoerr "%s"' % error)
 	vim.command('echohl None')
 EOF
