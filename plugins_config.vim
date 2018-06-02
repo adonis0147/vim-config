@@ -1,4 +1,4 @@
-let mapleader=","
+let mapleader=" "
 
 " lightline settings
 try
