@@ -15,28 +15,28 @@
 
 ## Shortcuts
 
-  - `,e`  ==> quit
-  - `,E`  ==> quit all without saving
-  - `,<enter>`  ==> don't highlight the search results
+  - `<space>e`  ==> quit
+  - `<space>E`  ==> quit all without saving
+  - `<space><enter>`  ==> don't highlight the search results
   - Easier moving between windows:
     + `ctrl-j`  ==> down
     + `ctrl-k`  ==> up
     + `ctrl-h`  ==> left
     + `ctrl-l`  ==> right
   - Easier moving between tabs
-    + `,n`  ==> previous tab
-    + `,m`  ==> next tab
+    + `<space>n`  ==> previous tab
+    + `<space>m`  ==> next tab
   - Copy content to clipboard
     1. Select the content
     2. In visual mode, press `ctrl-c`
-  - `,f`  ==> toggle ctrlp
+  - `<space>f`  ==> toggle ctrlp
   - `<F3>`  ==> toggle nerdtree
   - `<F4>`  ==> toggle tagbar
   - `<F5>`  ==> build a project
   - `<F9>`  ==> build and run(only available for a single source code file)
   - `ctrl-j`  ==> UltiSnipsExpandTrigger
-  - `,s`    ==> GoldenViewSwitchMain
-  - `,S`    ==> GoldenViewSwitchToggle
+  - `<space>s`    ==> GoldenViewSwitchMain
+  - `<space>S`    ==> GoldenViewSwitchToggle
 
 ## Plugins Management
 
