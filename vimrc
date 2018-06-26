@@ -189,10 +189,14 @@ map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
+tnoremap <c-j> <c-w>j
+tnoremap <c-k> <c-w>k
+tnoremap <c-l> <c-w>l
+tnoremap <c-h> <c-w>h
 
 " Easier moving between tabs
-nnoremap <leader>n <esc>:tabprevious<cr>
-nnoremap <leader>m <esc>:tabnext<cr>
+nnoremap <leader>n <esc>:bprevious<cr>
+nnoremap <leader>m <esc>:bnext<cr>
 
 " Easier moving of code blocks
 vnoremap < <gv
