@@ -8,8 +8,7 @@ endtry
 
 " GoldenView settings
 let g:goldenview__enable_default_mapping = 0
-nmap <silent> <space>s <Plug>GoldenViewSwitchMain
-nmap <silent> <space>S <Plug>GoldenViewSwitchToggle
+nmap <silent> <leader>w <Plug>GoldenViewSwitchMain
 
 " ctrlp settings
 let g:ctrlp_map = '<leader>f'
@@ -59,10 +58,10 @@ let python_highlight_all = 1
 let g:gutentags_cache_dir = "~/.cache/ctags"
 
 " vim-quickhl settings
-nmap <Space>m <Plug>(quickhl-manual-this-whole-word)
-xmap <Space>m <Plug>(quickhl-manual-this-whole-word)
-nmap <Space>M <Plug>(quickhl-manual-reset)
-xmap <Space>M <Plug>(quickhl-manual-reset)
+nmap <leader>h <Plug>(quickhl-manual-this-whole-word)
+xmap <leader>h <Plug>(quickhl-manual-this-whole-word)
+nmap <leader>u <Plug>(quickhl-manual-reset)
+xmap <leader>u <Plug>(quickhl-manual-reset)
 let g:quickhl_manual_colors = [
 	\ 'ctermbg=cyan    ctermfg=black guibg=#8CCBEA guifg=black',
 	\ 'ctermbg=green   ctermfg=black guibg=#A4E57E guifg=black',
