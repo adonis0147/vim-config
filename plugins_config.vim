@@ -74,6 +74,7 @@ let g:quickhl_manual_colors = [
 " ultisnips settings
 let g:UltiSnipsExpandTrigger = '<c-j>'
 let g:UltiSnipsSnippetsDir = '~/.vim/bundle/vim-snippets/UltiSnips'
+let g:is_bash = 1
 
 " YouCompleteMe setting
 nnoremap <leader>g :YcmCompleter GoTo<CR>
