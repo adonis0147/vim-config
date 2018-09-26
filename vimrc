@@ -37,8 +37,10 @@ set mouse=a
 set encoding=utf-8
 set termencoding=utf-8
 set fileencodings=utf-8,cp936
-set langmenu=zh_CN.utf-8
-language messages zh_CN.utf-8
+if has('win32')
+	set langmenu=zh_CN.utf-8
+	language messages zh_CN.utf-8
+endif
 
 " File formats
 set fileformats=unix,mac,dos
