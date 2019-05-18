@@ -13,7 +13,6 @@ cp plugins.vim ~/.vim/
 cp plugins_config.vim ~/.vim/
 cp -rf settings ~/.vim
 cp -rf indent ~/.vim
-cp ./ycm_extra_conf.py ~/.vim
 
 vim -c ":PlugInstall" -c "qa"
 

@@ -1,0 +1,7 @@
+{
+	"list.insertMappings": {
+		"<c-t>": "action:tabe",
+		"<c-v>": "action:vsplit",
+		"<c-s>": "action:split"
+	}
+}
