@@ -64,7 +64,7 @@ set history=700
 set undolevels=700
 
 " Don't redraw while executing macros
-"set lazyredraw
+set lazyredraw
 
 " Scroll
 set scrolloff=7
