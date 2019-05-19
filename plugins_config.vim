@@ -95,3 +95,6 @@ let g:ycm_filetype_blacklist = {
     \ 'mail'     : 1,
     \ 'searcher' : 1
     \}
+
+" vim-go settings
+let g:go_fmt_command = "goimports"
