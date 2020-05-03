@@ -294,7 +294,7 @@ from subprocess import Popen, PIPE
 
 args = []
 info = platform.platform()
-if info.startswith('Darwin'):
+if info.startswith('Darwin') or info.startswith('macOS'):
     args = ['pbcopy']
 elif info.startswith('Linux'):
     args = ['xsel', '-bi']
