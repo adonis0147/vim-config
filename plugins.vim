@@ -25,7 +25,7 @@ Plug 't9md/vim-quickhl'
 
 if !&diff
 	Plug 'zhaocai/GoldenView.Vim'
-	Plug 'Valloric/YouCompleteMe', {'do': 'python install.py --clang-completer --go-completer'}
+	Plug 'Valloric/YouCompleteMe', {'do': 'python install.py --clangd-completer --go-completer'}
 endif
 
 call plug#end()
