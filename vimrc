@@ -261,7 +261,7 @@ function! DeleteTrailingWS()
         exe "normal `z"
     end
 endfunction
-autocmd! bufwritepre * :call DeleteTrailingWS()
+"autocmd! bufwritepre * :call DeleteTrailingWS()
 
 " Auto generate tags
 function! CreateTags()

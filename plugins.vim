@@ -22,6 +22,7 @@ Plug 'adonis0147/a.vim', {'for': ['c', 'cpp', 'cc']}
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'fatih/vim-go'
 Plug 't9md/vim-quickhl'
+Plug 'axelf4/vim-strip-trailing-whitespace'
 
 if !&diff
 	Plug 'zhaocai/GoldenView.Vim'
