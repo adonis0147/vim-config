@@ -26,7 +26,7 @@ Plug 'axelf4/vim-strip-trailing-whitespace'
 
 if !&diff
 	Plug 'zhaocai/GoldenView.Vim'
-	Plug 'Valloric/YouCompleteMe', {'do': 'python install.py --clangd-completer --go-completer'}
+	Plug 'ycm-core/YouCompleteMe', {'do': 'python install.py --clangd-completer --go-completer'}
 endif
 
 call plug#end()
