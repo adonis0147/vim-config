@@ -16,8 +16,8 @@ let g:ctrlp_max_files = 0
 let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_working_path_mode = 'rw'
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
-let g:cIndexer_custom_ignore_extensions = ['sfx', 'gim', 'gis', 'ags', 'mesh', 'mtg', 'ter', 'cache', 'col']
-let g:cIndexer_custom_ignore_directories = ['client/engine', 'server/script/com', 'server/mongodb', 'server/com']
+let g:cIndexer_custom_ignore_extensions = ['o', 'a', 'la', 'so', 'class', 'pyc', 'pyd']
+let g:cIndexer_custom_ignore_directories = ['.cache']
 nnoremap <leader>b :CtrlPBuffer<cr>
 
 " delimitMate settings
